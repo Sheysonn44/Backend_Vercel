@@ -8,17 +8,17 @@ app.use(express.urlencoded({extended:true}))
 const login = require("./src/routes/loginrouters")
 const teacher = require("./src/routes/teacher.routes")
 
-const allowedOrigins = ['http://localhost:5173', 'http://localhost:5175'];
+// const allowedOrigins = ['http://localhost:5173', 'http://localhost:5175'];
 
 app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: false,
+  // origin: (origin, callback) => {
+  //   if (!origin || allowedOrigins.includes(origin)) {
+  //     callback(null, true);
+  //   } else {
+  //     callback(new Error('Not allowed by CORS'));
+  //   }
+  // },
+  // credentials: false,
 }));
 
 // Ruta base para utilizar el servicio
